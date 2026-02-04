@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐔 Chicken Selector</h1>
+        <p class="subtitle">Find the perfect chicken breed for your needs</p>
+
+        <div class="categories">
+            <!-- Climate Category -->
+            <div class="category">
+                <h2>Climate</h2>
+                <div class="options-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="climate" value="hot" data-category="climate">
+                        <span>Hot</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="climate" value="mediterranean" data-category="climate">
+                        <span>Mediterranean</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="climate" value="cold" data-category="climate">
+                        <span>Cold</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Egg Production Category -->
+            <div class="category">
+                <h2>Egg Production</h2>
+                <div class="options-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="production" value="productive" data-category="production">
+                        <span>Productive Egg Layer</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="production" value="medium" data-category="production">
+                        <span>Medium Egg Layer</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="production" value="poor" data-category="production">
+                        <span>Poor Egg Layer</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Temperament Category -->
+            <div class="category">
+                <h2>Temperament</h2>
+                <div class="options-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="docile" data-category="temperament">
+                        <span>Docile</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="independent" data-category="temperament">
+                        <span>Independent</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="temperament" value="aggressive" data-category="temperament">
+                        <span>Aggressive</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Egg Size Category -->
+            <div class="category">
+                <h2>Egg Size</h2>
+                <div class="options-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="eggSize" value="small" data-category="eggSize">
+                        <span>Small</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="eggSize" value="medium" data-category="eggSize">
+                        <span>Medium</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="eggSize" value="large" data-category="eggSize">
+                        <span>Large</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button id="suggestBtn" class="suggest-button">Suggest Chicken</button>
+
+        <div id="results" class="results-container" style="display: none;">
+            <h2>Suggested Chickens</h2>
+            <div id="chickenList" class="chicken-list"></div>
+        </div>
+
+        <div id="noSelection" class="message" style="display: none;">
+            <p>Please select at least one option to get suggestions.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
